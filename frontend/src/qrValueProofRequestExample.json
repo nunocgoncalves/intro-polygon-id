@@ -6,7 +6,7 @@
     "body": {
         "reason": "Participate in Airdrop",
         "transaction_data": {
-            "contract_address": "0x74990d3f05bb91BBd7CD730D9c8a0A83Ee4c7380",
+            "contract_address": "0xf8D96227858458c5F5A2Eedc29f4ADe28fc6bE22",
             "method_id": "b68967e2",
             "chain_id": 80001,
             "network": "polygon-mumbai"
