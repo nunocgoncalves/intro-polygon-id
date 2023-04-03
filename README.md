@@ -60,9 +60,32 @@ npx hardhat run --network mumbai scripts/set-request.js
 
 1. Update the proof request in ``frontend/src/qrValueProofRequestExample.json`` with the deployed deployed contract address in the `contract_address` field.
 
-2. Go to the ``frontend`` directory and start the React app to display the QR code for the proof request.
+2. Start the React app to display the QR code for the proof request.
 ```sh
 cd frontend
 npm i
 npm start
+```
+
+## Deploy Frontend on IPFS
+
+1. Install the Spheron CLI
+```sh
+npm i --dev @spheron/cli
+```
+
+2. Config Spheron project
+```sh
+npx spheron init
+```
+
+3. Login to Spheron
+```sh
+npx spheron login
+```
+
+4. Publish it
+```sh
+npm run build
+npx spheron publish
 ```
