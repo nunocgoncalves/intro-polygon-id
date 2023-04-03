@@ -2,23 +2,26 @@
 
 In this tutorial we will implment a ZK Airdrop with Polygon ID using the Demo Issuer, [Hardhat](https://hardhat.org/) and the Polygon Mumbai Testnet.
 
-## Intro to Polygon ID
+## [Polygon ID](https://0xpolygonid.github.io/tutorials/) Concepts
 
-## Contracts
-
-**mtp verifier address**: ``0x357Bb671fEb5577d310410eab93291B4De04a834``
-
-**sig verifier address**: ``0xf635aCA4E8B5268aA9Bf8E226907C27383fC9686``
-
-**default mtp validator**: ``0x3DcAe4c8d94359D31e4C89D7F2b944859408C618``
-
-**default sig validator**: ``0xF2D4Eeb4d455fb673104902282Ce68B9ce4Ac450``
-
-**default state address**: ``0x134B1BE34911E39A8397ec6289782989729807a4``
-
-**poseidon6 library**: ``0xb588b8f07012Dc958aa90EFc7d3CF943057F17d7``
-
-**spongeHash library**: ``0x12d8C87A61dAa6DD31d8196187cFa37d1C647153``
+- Every identity is identified by a unique identifier called [DID (Decentralized Identifier)](https://www.w3.org/TR/did-core/)
+- Every identity-based information is represented via a [Verifiable Credentials (VCs)](https://www.w3.org/TR/vc-data-model/)
+- Architecture
+    - Wallet (Identity Holder)
+        - Identity that holds claims in the Wallet.
+        - The Identity Holder generates zero-knowledge proofs of the VCs issued and presents these proofs to the Verifier, which verifies that the proof is authentic and matches specific criteria.
+    - Issuer
+        - An entity (person, organization, or thing) that issues VCs to the Holders.
+        - VCs are cryptographically signed by the Issuer.
+        - Every VC comes from an Issuer.
+    - Verifier
+        - A Verifier verifies the proof presented by a Holder.
+        - It requests the Holder to send a proof based on the VCs they hold in their wallet.
+        - While verifying a proof, the Verifier performs a set of checks, for example that the VC was signed by the expected Issuer and that the VC matches the criteria requested by the Verifier.
+        - Verification can be done on or off chain
+    - Triangle of Trust
+        - Trust must exist between a Verifier and an Issuer: the fact that the information contained inside a VC are cryptographically verifiable doesn't guarantee its truth.
+        - The Issuer must be a trusted and reputable party so that Verifier can consume the VCs originated by that Issuer.
 
 ## Walkthrough
 
