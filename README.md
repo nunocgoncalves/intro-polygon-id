@@ -9,16 +9,16 @@ In this tutorial we will implment a ZK Airdrop with Polygon ID using the Demo Is
 
 ### Architecture
 
-- **Wallet (Identity Holder)**
+- [**Wallet (Identity Holder)**](https://0xpolygonid.github.io/tutorials/wallet/wallet-overview/)
     - Identity that holds claims in the Wallet.
     - The Identity Holder generates zero-knowledge proofs of the VCs issued and presents these proofs to the Verifier, which verifies that the proof is authentic and matches specific criteria.
     
-- **Issuer**
+- [**Issuer**](https://0xpolygonid.github.io/tutorials/issuer/issuer-overview/)
     - An entity (person, organization, or thing) that issues VCs to the Holders.
     - VCs are cryptographically signed by the Issuer.
     - Every VC comes from an Issuer.
 
-- **Verifier**
+- [**Verifier**](https://0xpolygonid.github.io/tutorials/verifier/verifier-overview/)
     - A Verifier verifies the proof presented by a Holder.
     - It requests the Holder to send a proof based on the VCs they hold in their wallet.
     - While verifying a proof, the Verifier performs a set of checks, for example that the VC was signed by the expected Issuer and that the VC matches the criteria requested by the Verifier.
